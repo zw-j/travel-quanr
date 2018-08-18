@@ -40,22 +40,22 @@ export default {
   color: #00afc7
 .info
   list-style none
-  width:375px;
-  height:100px;
+  width:7.5rem;
+  height:2rem;
   background white;
-  border-bottom 1px solid #d5d5d5
+  border-bottom .01rem solid #d5d5d5
   .info-img-wrap
     float left;
     padding:.1rem
     .info-img
-      width 90px;
-      height 90px;
+      width 1.8rem;
+      height 1.8rem;
   .info-text
     float:left;
     padding-top .2rem
     .text-title
       font-weight bold
-      font-size 16px;
+      font-size .32rem;
     .text-content
       color #bbbbbb
       margin-top .18rem
@@ -64,7 +64,7 @@ export default {
       color white
       background orangered
       border none
-      border-radius 3px;
+      border-radius .03rem;
       padding-left .2rem
       padding-right .2rem
       font-weight bold

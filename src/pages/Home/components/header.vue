@@ -40,7 +40,7 @@ export default {
       margin-top:.12rem;
       margin-left:.2rem;
       line-height:.62rem;
-      font-size:15px;
+      font-size:.3rem;
       padding-left:.05rem
     .header_left
       width:.64rem;
@@ -50,7 +50,7 @@ export default {
       width:1.24rem;
       float:right;
       text-align:center;
-      font-size:15px;
+      font-size:.3rem;
       .icon-city
         font-size:.40rem;
         margin-left:-.05rem;

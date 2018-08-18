@@ -91,81 +91,81 @@ export default {
     height 1.2rem
     background #eeeeee
     text-align center
-    line-height 25px;
-    padding-top 5px;
+    line-height .5rem;
+    padding-top .05rem;
     a
-      margin-right 20px;
+      margin-right .4rem;
   .footer
     height 1.4rem
     background #eeeeee
-    border-bottom 1.5px solid  #d5d5d5
+    border-bottom .015rem solid  #d5d5d5
     .down_list
       list-style none
-      width 300px;
+      width 6rem;
       margin 0 auto
-      line-height 39px;
+      line-height .78rem;
       li
         float:left
-        width 60px;
-        height:39px
-        margin-right 10px;
+        width 1.2rem;
+        height:.78rem
+        margin-right .1rem;
     .up_list
       overflow hidden
       list-style none
-      line-height 40px;
-      width 320px;
+      line-height .8rem;
+      width 6.4rem;
       margin 0 auto
       a
         color:gray
       div
         float: left;
-        width: 22px;
-        height: 22px;
+        width: .44rem;
+        height: .44rem;
         background: url("~style/image/nav_7.png") 0 0 no-repeat;
-        background-size: 175px 50px;
-        margin-top 10px;
-        margin-right 3px;
+        background-size: 3.5rem 1rem;
+        margin-top .1rem;
+        margin-right .03rem;
       .hotel
         div
-          background-position: -25px 0;
+          background-position: -.5rem 0;
       .house
         div
-          background-position: -150px 0px;
+          background-position: -3rem 0;
       li
         float:left
-        width 75px;
-        height 31px;
+        width 1.5rem;
+        height .62rem;
   .all
     background white
     line-height .6rem
     text-align center
-    font-size 12px
+    font-size .24rem
     position relative
     .span-icon
       position absolute
-      left 5px;
-      top -1px
+      left .05rem;
+      top -.01rem
     .span_info
-      margin-left -15px
+      margin-left -.3rem
       .span_price
-        font-size 13px;
+        font-size .26rem;
   .info
     list-style none
-    width:375px;
-    height:202.39px;
+    width:7.5rem;
+    height:4.05rem;
     background white;
-    border-bottom 2.5px solid #d5d5d5
+    border-bottom .025rem solid #d5d5d5
     .info-img-wrap
       width 100%;
       .info-img
-        width 375px;
-        height 139.08px;
+        width 7.5rem;
+        height 2.78rem;
     .info-text
       padding-top .2rem
       padding-left .2rem
       .text-title
-        font-size 14px;
+        font-size .28rem;
       .text-content
-        font-size 13px
+        font-size .26rem
         margin-top .18rem
 </style>
