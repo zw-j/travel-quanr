@@ -2,7 +2,7 @@
   <div>
     <div class="title">热门推荐</div>
     <ul class="info-list">
-      <li class="info" v-for="item of contentList" :key="item.id">
+      <li class="info" v-for="item of recommendList" :key="item.id">
         <div class="info-img-wrap">
           <a href="#"><img class="info-img" :src="item.imgUrl"></a>
         </div>
@@ -20,34 +20,9 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      contentList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/a4/a4511cb08f87f662a3.water.jpg_200x200_3b639896.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/2b/61926c532a022890e52ae233e093792c.water.jpg_200x200_6d5ebe13.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1605/c7/c7dd06252f0ff0af90.water.jpg_200x200_95cb2c7d.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '005',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/ae/ae40b952c637b458.water.jpg_200x200_9606b7bc.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        }
-      ]
+  props: {
+    recommendList: {
+      type: Array
     }
   }
 }

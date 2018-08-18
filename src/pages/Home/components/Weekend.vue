@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末哪里</div>
     <ul class="info-list">
-      <li class="info" v-for="item of contentList" :key="item.id">
+      <li class="info" v-for="item of weekendList" :key="item.id">
         <div class="info-img-wrap">
           <a href="#"><img class="info-img" :src="item.imgUrl"></a>
         </div>
@@ -74,40 +74,9 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      contentList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/4a/ac007012d54bd4.jpg_r_640x214_eefa6ade.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/fd/1baebcfe8272b1.jpg_r_640x214_e371e436.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '004',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/f4/1f84f5029ef781.jpg_r_640x214_b32125fd.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        },
-        {
-          id: '005',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1507/43/4c766d2304b1c6.jpg_r_640x214_11733be7.jpg',
-          title: '惠州平安峡漂流',
-          content: '从所未有的刺激漂流体验'
-        }
-      ]
+  props: {
+    weekendList: {
+      type: Array
     }
   }
 }
