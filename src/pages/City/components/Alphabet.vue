@@ -12,10 +12,15 @@
 export default {
   data () {
     return {
-      touchStatus: false
+      touchStatus: false,
+      StartY: 0,
+      timer: null
     }
   },
   name: 'CityAlphabet',
+  updated () {
+    this.StartY = this.$refs['A'][0].offsetTop
+  },
   computed: {
     letters () {
       const letter = []
@@ -39,12 +44,16 @@ export default {
     },
     handleTouchMove (e) {
       if (this.touchStatus) {
-        const StartY = this.$refs['A'][0].offsetTop
-        const TouchY = e.touches[0].clientY - 79
-        const index = Math.floor((TouchY - StartY) / 20)
-        if (index >= 0 && index < this.letters.length) {
-          this.$emit('change', this.letters[index])
+        if (this.timer) {
+          clearTimeout(this.timer)
         }
+        this.timer = setTimeout(() => {
+          const TouchY = e.touches[0].clientY - 79
+          const index = Math.floor((TouchY - this.StartY) / 20)
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 16)
       }
     },
     handleTouchEnd () {
