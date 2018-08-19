@@ -15,12 +15,12 @@ export default {
     padding .1rem
     background $bgColor
     .input-search
+      margin-top -.3rem
       box-sizing border-box
       width: 100%
-      line-height .62rem
+      line-height .65rem
       text-align center
       border-radius .06rem
-      height .62rem
       border:none
       padding 0 .1rem
       color: gray
