@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header_right">
-          {{city}}
+        {{this.$store.state.city}}
         <span class="iconfont icon-city">&#xe6aa;</span>
       </div>
     </router-link>
@@ -18,12 +18,7 @@
 
 <script>
 export default {
-  name: 'HomeHeader',
-  props: {
-    city: {
-      type: String
-    }
-  }
+  name: 'HomeHeader'
 }
 </script>
 <style lang="stylus" scoped>
@@ -49,7 +44,8 @@ export default {
       float:left;
       text-align center;
     .header_right
-      width:1.24rem;
+      min-width:1.24rem
+      padding-left .1rem
       float:right;
       text-align:center;
       font-size:.3rem;

@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="search">
-      <input type="text" v-model="keyword" class="input-search" placeholder="输入城市名或拼音">
+      <input type="text" v-model="keyword" class="input-search"
+             placeholder="输入城市名或拼音">
     </div>
     <div class="search-content" ref="search_flag" v-show="this.keyword">
       <ul>
-        <li class="search-item" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item" @click="handleCityClick(item.name)"
+            v-for="item of list" :key="item.id">{{item.name}}</li>
         <li class="search-item" v-show="!this.list.length">没有找到匹配地点</li>
       </ul>
     </div>
@@ -24,6 +26,12 @@ export default {
   },
   mounted () {
     this.BScroll = new Bscroll(this.$refs.search_flag)
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
+    }
   },
   watch: {
     keyword () {
