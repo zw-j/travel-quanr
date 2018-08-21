@@ -1,21 +1,45 @@
 <template>
-  <div class="banner">
-    <img src="http://img1.qunarzz.com/sight/p0/1412/85/fc4b88c4d559fd35dfc0f66e0f0e2ee5.water.jpg_350x240_54ff894e.jpg"
-         class="banner-img">
-    <div class="banner-info">
-      <div class="info_con">
-        西岛(AAAA景区)
-      </div>
-      <div class="info-number">
-        <span class="iconfont">&#xe633;</span>
-        <span>27</span>
+  <div>
+    <div class="banner" @click="handleImgClick">
+      <img src="http://img1.qunarzz.com/sight/p0/1412/85/fc4b88c4d559fd35dfc0f66e0f0e2ee5.water.jpg_350x240_54ff894e.jpg"
+           class="banner-img">
+      <div class="banner-info">
+        <div class="info_con">
+          西岛(AAAA景区)
+        </div>
+        <div class="info-number">
+          <span class="iconfont">&#xe633;</span>
+          <span>27</span>
+        </div>
       </div>
     </div>
+    <common-gallery :images="images" v-show="flag" @Close="handleClose"></common-gallery>
   </div>
 </template>
 <script>
+import CommonGallery from 'common/gallery/Gallery'
 export default {
-  name: 'DetailBanner'
+  data () {
+    return {
+      flag: false,
+      images: [
+        'http://img1.qunarzz.com/sight/p0/1412/85/fc4b88c4d559fd35dfc0f66e0f0e2ee5.water.jpg_350x240_54ff894e.jpg',
+        'http://img1.qunarzz.com/sight/p0/1412/85/fc4b88c4d559fd35dfc0f66e0f0e2ee5.water.jpg_350x240_54ff894e.jpg'
+      ]
+    }
+  },
+  name: 'DetailBanner',
+  components: {
+    CommonGallery
+  },
+  methods: {
+    handleImgClick () {
+      this.flag = true
+    },
+    handleClose () {
+      this.flag = false
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -44,5 +68,5 @@ export default {
       .info_con
         font-size .32rem
         float left
-        margin-top .1rem
+        margin-top .1 rem
 </style>
