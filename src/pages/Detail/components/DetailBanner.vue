@@ -13,11 +13,14 @@
         </div>
       </div>
     </div>
-    <common-gallery :images="gallaryImgs" v-show="flag" @Close="handleClose"></common-gallery>
+    <detail-fade>
+     <common-gallery :images="gallaryImgs" v-show="flag" @Close="handleClose"></common-gallery>
+    </detail-fade>
   </div>
 </template>
 <script>
 import CommonGallery from 'common/gallery/Gallery'
+import DetailFade from 'common/fade-ainmation/fade'
 export default {
   props: {
     sightName: String,
@@ -31,7 +34,8 @@ export default {
   },
   name: 'DetailBanner',
   components: {
-    CommonGallery
+    CommonGallery,
+    DetailFade
   },
   methods: {
     handleImgClick () {

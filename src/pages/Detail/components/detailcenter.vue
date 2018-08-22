@@ -32,12 +32,6 @@
         <span class="iconfont down-right-icon">&#xe62d;</span>
       </div>
     </div>
-    <div class="city_tro">
-      <div class="tro_header">
-        <span class="tro_icon"></span>
-        <span class="tro_tit">去哪儿推荐</span>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -112,21 +106,4 @@ export default {
         float right
         margin-right .15rem
         opacity .5
-  .city_tro
-    overflow hidden
-    margin-top .18rem
-    background white
-    .tro_header
-      line-height .88rem
-      padding-left .2rem
-      border-bottom 1px solid #e5e5e5
-      .tro_icon
-        display: inline-block;
-        margin-bottom -.06rem
-        width: .36rem;
-        height: .36rem;
-        background: url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat;
-        background-size: .4rem 3rem;
-      .tro_tit
-        font-size .3rem
 </style>

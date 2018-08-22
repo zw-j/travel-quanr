@@ -5,6 +5,8 @@
     <detail-header></detail-header>
     <div class="content">
       <detail-center></detail-center>
+      <detail-introduction></detail-introduction>
+      <header-item></header-item>
       <detail-list :list="categoryList"></detail-list>
     </div>
   </div>
@@ -16,6 +18,8 @@ import DetailHeader from './components/detaiilheader'
 import DetailList from './components/detail-list'
 import DetailCenter from './components/detailcenter'
 import axios from 'axios'
+import DetailIntroduction from './components/introduction'
+import HeaderItem from './components/headeritem'
 
 export default {
   data () {
@@ -53,7 +57,9 @@ export default {
     DetailBanner,
     DetailHeader,
     DetailList,
-    DetailCenter
+    DetailCenter,
+    DetailIntroduction,
+    HeaderItem
   }
 }
 </script>
