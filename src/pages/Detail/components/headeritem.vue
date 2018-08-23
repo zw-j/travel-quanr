@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="header_item">
+    <div class="header_item" v-show="header_item">
       <span class="post_door">门票</span>
       <span class="one_day">一日游</span>
       <span class="hap_item">娱乐项目</span>
     </div>
-    <div class="header_item header_show" v-show="false">
-      <span class="post_door">门票</span>
+    <div class="header_item header_show" v-show="!header_item">
+      <span class="post_door" :class="{bottom_bor:active}">门票</span>
       <span class="one_day">一日游</span>
       <span class="hap_item">娱乐项目</span>
     </div>
@@ -15,18 +15,31 @@
 <script>
 export default {
   name: 'HeaderItem',
-  methods: {
-    handleHeaderScroll () {
-      const scrolled = document.documentElement.scrollTop
-      console.log(scrolled)
+  data () {
+    return {
+      header_item: true,
+      active: false
     }
   },
-  activated () {
+  methods: {
+    handleHeaderScroll () {
+      const scrollTop = document.documentElement.scrollTop
+      if (scrollTop > 540) {
+        this.header_item = false
+        this.active = true
+      } else {
+        this.header_item = true
+      }
+    }
+  },
+  mounted () {
     window.addEventListener('scroll', this.handleHeaderScroll)
   }
 }
 </script>
 <style lang="stylus" scoped>
+  /*.bottom_bor*/
+    /*border-bottom 2px solid #13a1d6*/
   .header_item
     line-height .5rem
     background white
@@ -39,8 +52,9 @@ export default {
     .hap_item
       margin-left 1.19rem
   .header_show
+    z-index:3
     position fixed
-    top .62rem
+    top .7rem
     left 0
     right  0
 </style>

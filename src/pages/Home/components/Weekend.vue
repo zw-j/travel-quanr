@@ -121,7 +121,7 @@ export default {
         float: left;
         width: .44rem;
         height: .44rem;
-        background: url("~style/image/nav_7.png") 0 0 no-repeat;
+        background: url(http://source.qunarzz.com/site/images/wap/touch/images/v2/images2x/nav_7.png) 0 0 no-repeat;
         background-size: 3.5rem 1rem;
         margin-top .1rem;
         margin-right .03rem;
