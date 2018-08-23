@@ -2,7 +2,7 @@
   <ul class="alphabet">
     <li class="item" v-for="item of letters" :key="item"
         :ref="item"
-        @click="handleClick" @touchstart="handleTouchStart"
+        @click="handleClick" @touchstart.prevent="handleTouchStart"
         @touchend="handleTouchEnd"
         @touchmove="handleTouchMove"
     >{{item}}</li>

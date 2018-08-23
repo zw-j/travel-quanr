@@ -7,7 +7,7 @@
       <router-link to="/">
         <span class="iconfont city-icon">&#xe605;</span>
       </router-link>
-      景点详情
+      西岛
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     return {
       showAbs: true,
       opacityStyle: {
-        opacity: 0
+        opacity: 1
       }
     }
   },
@@ -42,10 +42,10 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
-  },
-  deactivated () {
-    window.removeEventListener('scroll', this.handleScroll)
   }
+  // deactivated () {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // }
 }
 </script>
 <style lang="stylus" scoped>

@@ -5,7 +5,7 @@
       <span class="one_day">一日游</span>
       <span class="hap_item">娱乐项目</span>
     </div>
-    <div class="header_item header_show">
+    <div class="header_item header_show" v-show="false">
       <span class="post_door">门票</span>
       <span class="one_day">一日游</span>
       <span class="hap_item">娱乐项目</span>
